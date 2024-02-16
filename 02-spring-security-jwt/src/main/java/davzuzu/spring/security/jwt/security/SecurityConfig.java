@@ -46,12 +46,12 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/hello").permitAll()
-                        .anyRequest().authenticated()
 //                        .requestMatchers("/access-admin").hasRole(ERole.ADMIN.name())
 //                        .requestMatchers("/access-user").hasRole(ERole.USER.name())
 //                        .requestMatchers("/access-invited").hasRole(ERole.INVITED.name())
                         // Trabajar un request con varios roles
 //                        .requestMatchers("/access-user").hasAnyRole(ERole.ADMIN.name(), ERole.USER.name())
+                        .anyRequest().authenticated()
                         )
                 .sessionManagement(sessionManagement -> sessionManagement
                         // STATELESS: No crea ninguna sesion, no trabaja con sesiones. Todas las solicitudes
