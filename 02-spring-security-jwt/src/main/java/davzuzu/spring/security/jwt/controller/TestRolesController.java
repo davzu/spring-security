@@ -13,7 +13,6 @@ public class TestRolesController {
     @GetMapping("/access-admin")
     @PreAuthorize("hasRole('ADMIN')")
     public String accessAdmin() {
-        String.format("","");
         return "Hola, has accedido con rol de ADMIN";
     }
 
