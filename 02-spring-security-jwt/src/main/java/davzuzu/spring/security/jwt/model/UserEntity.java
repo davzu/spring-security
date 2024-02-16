@@ -36,9 +36,9 @@ public class UserEntity {
     // PERSIST: Graba los roles asociados al usuario, pero no los elimina
     @ManyToMany(fetch = FetchType.EAGER, targetEntity = RoleEntity.class, cascade = CascadeType.PERSIST)
     // user_role: Tabla intermedia entre usuarios y roles
-    // joinColumns: Se indica el nombre que va a tener la clave foranea del usuario y la clave foranea del rol
-    // @JoinColumn: Clave foranea del usuario o rol de la tabla generada
+    // joinColumns: Se indica el nombre que va a tener la clave foranea del usuario
     // inverseJoinColumns: Clave foranea del rol de la tabla generada
+    // @JoinColumn: Clave foranea del usuario o rol de la tabla generada
     @JoinTable(name = "user_role",
                 joinColumns = @JoinColumn(name = "user_id"),
                 inverseJoinColumns = @JoinColumn(name="role_id"))

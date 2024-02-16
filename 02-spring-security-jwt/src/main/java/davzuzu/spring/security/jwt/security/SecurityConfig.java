@@ -74,6 +74,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    // Objeto que se encargara de la administracion de la autenticacion de los usuario
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
         // Tomara los objetos userDetailsService y passwordEncoder
@@ -96,9 +97,5 @@ public class SecurityConfig {
 //
 //        return manager;
 //    }
-
-    // Objeto que se encargara de la administracion autenticacion de los usuario
-    // Spring Security ya incluye el bean AuthenticationManager. Si no se hacen configuraciones adicionales,
-    // no se deberia incluirlo como se muestra lineas abajo
 
 }

@@ -12,7 +12,6 @@ public class RoleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     // @Enumerated: Asigna un enum a una columna de base de datos. Acepta dos tipos de mapeos.
     // El valor predeterminado es ORDINAL
     @Enumerated(EnumType.STRING)
